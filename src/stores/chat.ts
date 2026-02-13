@@ -37,7 +37,7 @@ export const useChatStore = defineStore('chat', () => {
 
       const assistantMsg: Message = {
         role: 'assistant',
-        content: response.answer,
+        content: response.response,
         timestamp: Date.now(),
         provider: response.provider
       };

@@ -2,8 +2,9 @@ import APIBase from './httpBase';
 
 interface ChatResponse {
   message: string;
-  provider: string;
-  answer: string;
+  response: string;
+  provider?: string;
+  contextUsed?: boolean;
 }
 
 class ChatService extends APIBase {
