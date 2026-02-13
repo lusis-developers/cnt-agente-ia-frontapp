@@ -16,7 +16,7 @@ const router = createRouter({
       component: () => import('../views/AgentChatView.vue'),
       meta: {
         requiresAuth: true,
-        title: 'Asistente Virtual | Prefectura del Guayas'
+        title: 'Asistente Virtual | CNT Ecuador'
       }
     },
     {

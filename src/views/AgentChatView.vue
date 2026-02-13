@@ -69,7 +69,7 @@ onMounted(() => {
   if (chatStore.messages.length === 0) {
     chatStore.messages.push({
       role: 'assistant',
-      content: '¡Hola! Soy el Agente de la Prefectura del Guayas. ¿En qué puedo ayudarte hoy?',
+      content: '¡Hola! Soy el Agente Virtual de CNT Ecuador. ¿En qué puedo ayudarte hoy?',
       timestamp: Date.now()
     });
   }
@@ -86,10 +86,10 @@ onMounted(() => {
     <header class="app-header">
       <div class="header-left">
         <div class="logo-wrapper">
-          <img src="@/assets/logo-prefectura.png" alt="Logo" class="logo" />
+          <img src="@/assets/logo-prefectura.png" alt="CNT Logo" class="logo" />
         </div>
         <div class="brand-info">
-          <h1>Agente IA</h1>
+          <h1>Agente CNT</h1>
           <div class="status-indicator">
             <span class="dot"></span>
             <span class="status-text">En línea</span>
@@ -106,7 +106,7 @@ onMounted(() => {
         </button>
         
         <button @click="handleLogout" class="logout-btn">
-          <span>Cerrar Sesión</span>
+          <span>Finalizar</span>
         </button>
       </div>
     </header>
@@ -154,7 +154,7 @@ onMounted(() => {
           <form @submit.prevent="handleSend" class="input-form">
             <textarea 
               v-model="newMessage"
-              placeholder="¿En qué puedo ayudarte hoy?"
+              placeholder="Escribe tu consulta sobre planes, facturación o soporte..."
               :disabled="chatStore.isTyping"
               @keydown.enter.prevent="handleSend"
               rows="1"
@@ -166,7 +166,7 @@ onMounted(() => {
               </svg>
             </button>
           </form>
-          <p class="disclaimer">Asistente Oficial de la Prefectura del Guayas • Información Institucional</p>
+          <p class="disclaimer">Asistente Virtual de CNT EP • Información confidencial y oficial</p>
         </div>
       </footer>
     </main>

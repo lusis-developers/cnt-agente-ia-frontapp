@@ -17,7 +17,7 @@ const handleLogin = async () => {
 
   // Simulando llamada a la API
   setTimeout(() => {
-    if (email.value === 'prefecturadelguayas@guayas.gob.ec' && password.value === '123456password') {
+    if (email.value === 'agenteia@cnt.ec' && password.value === '123456789') {
       localStorage.setItem('isAuth', 'true');
       router.push('/dashboard');
     } else {
@@ -37,18 +37,19 @@ const handleLogin = async () => {
 
     <div class="login-card">
       <div class="brand">
-        <img src="@/assets/logo-prefectura.png" alt="Prefectura del Guayas" class="logo" />
-        <h1>Agente de la Prefectura del Guayas</h1>
+        <img src="@/assets/logo-prefectura.png" alt="CNT Ecuador" class="logo" />
+        <h1>Agente Virtual CNT</h1>
+        <div class="demo-badge">Demo para CNT Ecuador</div>
       </div>
 
       <form @submit.prevent="handleLogin" class="login-form">
         <div class="input-group">
-          <label for="email">Correo Electrónico</label>
+          <label for="email">Correo Corporativo</label>
           <input
             id="email"
             v-model="email"
             type="email"
-            placeholder="prefecturadelguayas@guayas.gob.ec"
+            placeholder="agenteia@cnt.ec"
             required
           />
         </div>
@@ -68,13 +69,13 @@ const handleLogin = async () => {
 
         <button type="submit" :disabled="isLoading" class="login-btn">
           <span v-if="isLoading">Iniciando sesión...</span>
-          <span v-else>Ingresar</span>
+          <span v-else>Ingresar a la Demo</span>
         </button>
       </form>
 
       <footer class="login-footer">
-        <p>Prefectura del Guayas</p>
-        <p class="copyright">&copy; 2026 Todos los derechos reservados</p>
+        <p>Corporación Nacional de Telecomunicaciones</p>
+        <p class="copyright">&copy; 2026 CNT EP - Todos los derechos reservados</p>
       </footer>
     </div>
   </div>
@@ -142,6 +143,20 @@ const handleLogin = async () => {
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: -0.025em;
+    margin-bottom: 0.5rem;
+  }
+
+  .demo-badge {
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(37, 99, 235, 0.2);
   }
 }
 

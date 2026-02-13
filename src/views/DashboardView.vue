@@ -28,13 +28,13 @@ const handleLogout = () => {
     
     <main class="content">
       <div class="hero">
-        <h1>Esta sería la app</h1>
-        <p>Bienvenido a la plataforma del Agente de la Prefectura del Guayas.</p>
+        <h1>Bienvenido al Agente CNT</h1>
+        <p>Plataforma oficial de asistencia virtual de la Corporación Nacional de Telecomunicaciones.</p>
       </div>
     </main>
 
     <footer class="app-footer">
-      <p>Prefectura del Guayas &copy; 2026</p>
+      <p>CNT EP &copy; 2026</p>
     </footer>
   </div>
 </template>
